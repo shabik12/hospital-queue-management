@@ -23,7 +23,7 @@ jobs:
         env:
           POSTGRES_DB: hospital_queue_management
           POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
+          POSTGRES_PASSWORD: ${{ secrets.CI_DB_PASSWORD }}
         ports:
           - 5432:5432
         options: >-
@@ -35,8 +35,8 @@ jobs:
     env:
       SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/hospital_queue_management
       SPRING_DATASOURCE_USERNAME: postgres
-      DB_PASSWORD: postgres
-      JWT_SECRET: ci-test-secret-key-change-this-to-a-long-random-value
+      DB_PASSWORD: ${{ secrets.CI_DB_PASSWORD }}
+      JWT_SECRET: ${{ secrets.CI_JWT_SECRET }}
       ADMIN_PASSWORD: ci-test-admin-password
 
     steps:
