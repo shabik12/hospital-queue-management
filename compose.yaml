@@ -1,0 +1,23 @@
+
+services:
+  backend:
+    build:
+      context: .
+    container_name: hospital-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://pgvector-db:5432/hospital_queue_management
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS}
+    networks:
+      - n8n-rag
+    restart: unless-stopped
+
+networks:
+  n8n-rag:
+    external: true
+    name: n8n-rag
