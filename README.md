@@ -22,4 +22,8 @@ The pipeline performs the following steps:
 - PostgreSQL 16
 - GitHub Actions
 
+
 Hospital Queue Management System - Version A: A role-based hospital management application built using Spring Boot and PostgreSQL.
+
+Hospital Queue Management System - Version B: A secure hospital queue application developed using Java, Spring Boot and PostgreSQL.
+feature/developer-b
