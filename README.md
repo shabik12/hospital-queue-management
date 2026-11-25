@@ -22,4 +22,4 @@ The pipeline performs the following steps:
 - PostgreSQL 16
 - GitHub Actions
 
-The pipeline helps identify build and test failures early, ensuring that code changes are verified before they are merged into the main branch.
+Hospital Queue Management System - Version A: A role-based hospital management application built using Spring Boot and PostgreSQL.
