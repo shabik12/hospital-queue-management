@@ -54,3 +54,11 @@ jobs:
         run: |
           chmod +x mvnw
           ./mvnw -B clean verify
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hospital-queue-management
+          path: target/*.jar
+          if-no-files-found: error
+          retention-days: 7
