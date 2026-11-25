@@ -28,3 +28,4 @@ Hospital Queue Management System - Version A: A role-based hospital management a
 Hospital Queue Management System - Version B: A secure hospital queue application developed using Java, Spring Boot and PostgreSQL.
 feature/developer-b
 feature added:login
+Rebase practice: Main branch version
